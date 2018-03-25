@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DesktopLyricWidget</class>
+ <widget class="QWidget" name="DesktopLyricWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>866</width>
+    <height>155</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#DesktopLyricWidget{
+    background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.982955, y2:0, stop:0 rgba(84, 31, 68, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+
+QPushButton#pb_close{
+    min-width: 17px;
+    max-width: 17px;
+    min-height: 16px;
+    max-height: 16px;
+}
+
+QPushButton#pb_close{
+    border-image: url(:/images/skins/images/closeNormal.png);
+}
+
+QPushButton#pb_close:pressed{
+    border-image: url(:/images/skins/images/closePressed.png);
+}
+
+QListWidget#lw_lyricShow{
+    color: rgb(248, 217, 129);
+    font: 75 14pt &quot;微软雅黑&quot;;
+    border: none;
+    background-color: transparent;
+}
+
+QListWidget#lw_lyricShow::item{
+    min-height: 40px;
+    max-height: 40px;
+    background-color: transparent;
+}
+
+QListWidget#lw_lyricShow::item:selected{
+    color: red;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+QLabel#lb_songName{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 30px;
+    max-height: 30px;
+    font: 75 14pt &quot;微软雅黑&quot;;
+    color: rgb(255, 255, 255);
+}
+
+QPushButton#pb_play{
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border-image: url(:/images/skins/images/playStartPressed.png)
+}
+
+QPushButton#pb_prev, #pb_next{
+    min-width: 13px;
+    max-width: 13px;
+    min-height: 21px;
+    max-height: 21px;
+}
+
+QPushButton#pb_prev{
+    border-image: url(:/images/skins/images/previous.png);
+}
+
+QPushButton#pb_prev:pressed{
+    border-image: url(:/images/skins/images/previousPressed.png);
+}
+
+QPushButton#pb_prev:hover{
+    border-image: url(:/images/skins/images/previousHover.png);
+}
+
+QPushButton#pb_next{
+    border-image: url(:/images/skins/images/next.png);
+}
+
+QPushButton#pb_next:pressed{
+    border-image: url(:/images/skins/images/nextPressed.png);
+}
+
+QPushButton#pb_next:hover{
+    border-image: url(:/images/skins/images/nextHover.png);
+}
+
+QPushButton#pb_playMode{
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 25px;
+    max-height: 25px;
+    border-image: url(:/images/skins/images/loopNormal.png);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="3">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="12">
+      <widget class="QPushButton" name="pb_close">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lb_icon">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="skins.qrc">:/icons/skins/icons/widgetIcon.png</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="lb_songName">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Song Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="pb_prev">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="pb_play">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QPushButton" name="pb_next">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="11">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="9">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="5">
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>15</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="7">
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="10">
+      <widget class="QPushButton" name="pb_playMode">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="13">
+      <widget class="QListWidget" name="lw_lyricShow">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新建项目</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="skins.qrc"/>
+ </resources>
+ <connections/>
+</ui>
